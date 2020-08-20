@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.main-section {
+  background-color: #000;
+  background: url("../img/section\ -\ starlink.jpg") no-repeat center top/cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.main__header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.main__navigation1 {
+  flex-grow: 4;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__navigation1 a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.main__navigation1 a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: chocolate;
+  transition: all ease-out 0.3s;
+  position: absolute;
+  bottom: -0.5rem;
+  transform: scaleX(0);
+}
+
+.main__navigation1 a:hover::after {
+  transform: scaleX(1);
+}
+
+.main__burger {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.main__burger span {
+  display: block;
+  flex-direction: column;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+}
+
+.main__burger.active span {
+  background: transparent;
+}
+
+.main__burger.active span::after {
+  transform: rotate(-45deg);
+  transform-origin: center center;
+}
+
+.main__burger.active span::before {
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+
+.main__burger span::after,
+.main__burger span::before {
+  display: block;
+  content: "";
+  background: #fff;
+  width: 30px;
+  height: 2px;
+  transition: all ease-out 0.3s;
+  position: absolute;
+}
+
+.main__burger span::after {
+  transform: translateY(10px);
+}
+
+.main__burger span::before {
+  transform: translateY(-10px);
+}
+
+.main__navigation2 {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  top: 110px;
+  right: 5%;
+  transform: translateX(150%);
+  transition: all ease-out 0.5s;
+}
+
+.main__navigation2.active {
+  transform: translateX(0);
+}
+
+.main__navigation2 a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  text-align: right;
+  padding: 0.5rem 0;
+  transition: all ease-out 0.3s;
+  padding-right: 1rem;
+}
+.main__navigation2 a:hover {
+  background: chocolate;
+}
+
+.section__text {
+  max-width: 40%;
+  text-transform: uppercase;
+}
+.section__text > p {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+.section__text h2 {
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.section__text h5 {
+  margin-bottom: 1rem;
+}
+
+.section__text button {
+  background: transparent;
+  width: 160px;
+  height: 60px;
+  border: 3px solid #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  position: relative;
+  transition: all ease-out 0.5s;
+}
+.section__text button::after {
+  transition: all ease-out 0.5s;
+  transform-origin: bottom center;
+  display: block;
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+}
+.section__text button:hover::after {
+  transform: scaleY(1);
+}
+
+.section__text button p {
+  position: relative;
+  z-index: 10;
+  transition: all ease 1s;
+}
+
+.section__text button:hover p {
+  color: #000;
+}
+
+.human {
+  background: url("../img/section\ -\ human.jpg") no-repeat center top/cover;
+  height: 100vh;
+}
+
+.right__text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+}
+
+.crew-dragon {
+  background: black;
+  height: 100vh;
+}
+
+.section__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.section__row img {
+  height: 80vh;
+}
+
+.nasa {
+  background: url("../img/section\ -\ starship.jpg") no-repeat center top/cover;
+  height: 100vh;
+}
+
+.footer {
+  background-color: black;
+}
+
+.social-media__list {
+  display: flex;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.social-media__list li {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+
+.social-media__list li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-media__list li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: chocolate;
+  transform: scaleX(0);
+  transition: all ease-out 0.5s;
+}
+
+.social-media__list li a:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+  .section__text {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__navigation1 {
+    display: none;
+  }
+  .section__text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .social-media__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section__row {
+    position: relative;
+  }
+
+  .section__row img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .section__row .section__text {
+    position: absolute;
+    z-index: 3;
+  }
+}
