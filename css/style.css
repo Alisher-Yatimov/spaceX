@@ -263,6 +263,15 @@
   transform: scaleX(1);
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .section__text {
     max-width: 60%;
